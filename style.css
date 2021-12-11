@@ -1,0 +1,127 @@
+@import url(https://fonts.googleapis.com/css2?family=Varela&display=swap);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-image: linear-gradient(to right, red, yellow);
+    font-family: 'Varela', sans-serif;
+}
+
+.header {
+    font-size: 18px;
+}
+
+.header,
+form {
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input {
+    width: 300px;
+    padding-left: 5px;
+    outline: none;
+}
+
+.input,
+.add-btn {
+    background-color: #fff;
+    border: none;
+    height: 30px;
+    font-size: 18px;
+}
+
+.add-btn {
+    margin-right: 25px;
+    color: peru;
+    cursor: pointer;
+    width: 30px;
+    transition: 0.3s;
+}
+
+.add-btn:hover {
+    background-color: peru;
+    color: white;
+}
+
+.select {
+    position: relative;
+    appearance: none;
+    padding: 6px;
+    border: none;
+    outline: none;
+    width: 135px;
+}
+.div{
+    position: relative;
+}
+.div::after{
+    content: '\25BC';
+    color: red;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px;
+    transition: 0.3s;
+    pointer-events: none;
+}
+.div:hover::after{
+    background-color: red;
+    color: #fff;
+    cursor: pointer;
+}
+.list{
+    list-style: none;
+}
+.div-list{
+    display: flex;
+    justify-content: center;
+    height: 25px;
+    margin: 15px 0;
+    transition: 0.9s;
+}
+li{
+    background-color: #fff;
+    padding-left: 5px;
+}
+li p {
+    padding-right: 25px;
+}
+
+.checked, .delet{
+    border: none;
+    outline: none;
+    background-color: #fff;
+    cursor: pointer;
+}
+.fa-trash, .fa-check { /* how to make hover for 2 elements simultaniusly */         
+    pointer-events: none;
+    width: 15px;
+    color: peru;
+} 
+.fa-check:hover{ /* hover stoped working after js tasks on i tegs */ 
+    background-color: peru;
+    color: #fff;
+    border: 1px solid #fff;
+}
+.fa-trash:hover{
+    color: red;
+    background-color: yellow;
+}
+.fall{
+    transform: translateY(10rem) rotate(45deg);
+    opacity: 0;
+}
+
+.completed{
+    opacity: 0.5;
+    text-decoration: line-through;
+}
+
